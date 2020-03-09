@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Creative Company</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href='http://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="/creative-company/assets/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="/creative-company/assets/css/custom.css"/>
+		<link rel="stylesheet" href="/creative-company/assets/css/ionicons.min.css">	
+		<link rel="stylesheet" href="/creative-company/assets/css/font-awesome.min.css">
+		<link href="/creative-company/assets/css/animate.min.css" rel="stylesheet"> 
+		<link rel="stylesheet" href="/creative-company/assets/css/lightbox.css">
+
+	</head>
+
+	<body onload="calcular()">
+		
+		<!--  Navigation Bar -->
+		
+		<nav class="navbar navbar-default navbar-fixed-top noBorder" role="navigation">
+			<div class="container">
+				
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand brandStyle" href="index.html">
+						<img src="/creative-company/assets/images/logoDW3.png" alt="">
+					</a>
+				</div>
+				
+				<div class="collapse navbar-collapse noPadding"	id="myNavbar">
+					<div class="navbar-right menustyle">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html"><p>Inicio</p></a></li>
+							<li><a href="Servicios.html"><p>Servicios</p></a></li>
+							<li><a href="Portafolio.html"><p>Portafolio</p></a></li>
+							<li><a href="Cotizador.html"><p>Cotizador</p></a></li>
+							<li><a href="Contacto.html"><p>Contacto</p></a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</nav>
+
+		<!-- Main Page -->
+		
+		<div class="container-fluid noPadding">
+			<div id="home-slider"  class="carousel slider carousel-fade" data-ride="carousel">
+				<div class="carousel-inner">
+				  <div class="item active" style="background-image: url(assets/images/cotizacion.jpg)">
+					<div class="caption">
+					  <h1 class="animated fadeInLeftBig">Coti<span>Zador</span></h1>
+						  <p class="animated fadeInRightBig"></p>
+						  <a data-scroll class="btn btn-start animated fadeInUpBig" href="#cotizador">Empezar</a>
+					</div>
+				 </div>
+				</div>
+			</div>
+		</div>
+			
+		<div id="cotizador" class="container-fluid noPadding">
+			
+			<div class="container-fluid headpictureCotizador"></div>
+			
+			<div class="container  text-center">
+
+				<p class="textStyle">
+					<form action="" id="calcularPrecio">
+						<fieldset ></fieldset><legend class="text-center">Pagina web</legend>
+						  <!-- checked = true -->
+						  <p><input value="300" type="radio" name="opWeb" checked = true>Diseño Básico 3 paginas Index, Contacto, Formularios</p>
+						  <p><input value="400" type="radio" name="opWeb">Diseño Medio 4 paginas Index, Contacto, Formularios, </p>
+						  <p><input value="500" type="radio" name="opWeb">Diseño Medio 5 paginas Index, Contacto, Formularios</p>
+						</fieldset>
+						<fieldset><legend class="text-center">Diseño de Imagenes o logos</legend>
+						  <p><input value="0" type="radio" name="opDWeb" >Poseo todas las imagenes y logos(no requiero ajustes)</p>
+						  <p><input value="200" type="radio" name="opDWeb" checked = true >Diseño de hasta 10 imagenes y un logo sencillo</p>
+						  <p><input value="400" type="radio" name="opDWeb">Diseño de hasta 20 imagenes y un logo con mejoras profesionales</p>
+						  <p><input value="800" type="radio" name="opDWeb">Crear imágen Corporativa Incluye logos e imagen en Vector</p>
+						</fieldset>
+						<fieldset><legend class="text-center">Community Manager</legend>
+						  <p><input value="0" type="radio" name="opCM">No deseo el servicio</p>
+						  <p><input value="200" type="radio" name="opCM" checked = true>Dos publicaciones semanal en 3 cuentas por dos meses</p>
+						  <p><input value="600" type="radio" name="opCM">Tres publicaciones semanal en 3 cuentas por dos meses</p>
+						</fieldset>
+					  </form>
+	  
+					  <form action="" id="Descuento">
+						<fieldset><legend class="text-center">Mantenimiento</legend>
+						  <p><input value="1" type="radio" name="opD" checked = true >No deseo Mantenimiento</p>
+						  <p><input value="2" type="radio" name="opD">Mantenimiento por 6 meses (Solo Mantenimiento de Web y Community Manager) <span class="Descuento">Ahorras un mes</span></p>
+						  
+						  <p><input value="3" type="radio" name="opD"> Mantenimiento por 12 meses (Solo Mantenimiento de Web y Community Manager) <span class="Descuento"> Ahorras dos meses</span></p>
+						  
+						</fieldset>
+					  </form>
+				</p>
+				<div>
+					<p class="valor text-center">De acuerdo a lo selecionado su precio estimado es de <span id="precioFinal"></span><span>$</span></p>
+					
+				</div>
+				
+				
+
+			<!-- Footer -->
+			
+			<footer>
+				<div class="container footer">
+					<div class="row row-cols-3">
+					  <div class="col noPadding">
+						  <div class="logoDW responsiveAlign">
+							  <a href="#" class="noPadding">
+								<img src="/creative-company/assets/images/logoDW3.png" alt="">
+							  </a>						
+						</div>
+					  </div>
+					  <div class="col noPadding">
+						  <div class="logoText responsiveAlign">
+							  <a href="" class="noPadding">
+								<p id="footerLogoText">DW-Design © 2020</p>
+							  </a>
+						
+						</div>  
+					</div>
+					  <div class="col noPadding">
+						
+					  </div>
+					</div>
+				  </div>
+			</footer>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> 
+		<script src="/creative-company/assets/js/bootstrap.min.js"></script>
+		<script src="/creative-company/assets/js/myscript.js"></script>
+		<script src="/creative-company/assets/js/calculadora.js"></script>
+	</body>
+</html>
